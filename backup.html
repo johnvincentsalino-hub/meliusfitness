@@ -1,0 +1,417 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Melius Fitness</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  
+  <style>
+    html {
+      scroll-behavior: smooth;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    body {
+      background-color: #111;
+      color: #fff;
+      line-height: 1.6;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    header {
+      background-color: #000;
+      padding: 10px 40px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: sticky;
+      top: 0;
+      z-index: 10;
+    }
+
+    .logo-container {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .logo-container img {
+      width: 60px;
+      height: 60px;
+      object-fit: contain;
+    }
+
+    .logo-container h1 {
+      font-size: 1.8rem;
+      color: #B20710;
+      font-weight: 700;
+      letter-spacing: 1px;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 30px;
+    }
+
+    nav ul li a {
+      color: #fff;
+      font-weight: 500;
+      transition: color 0.3s ease, border-bottom 0.3s ease;
+      padding-bottom: 3px;
+    }
+
+    nav ul li a:hover {
+      color: #B20710;
+      border-bottom: 2px solid #B20710;
+    }
+
+    .home {
+      background: url('images/bgmusc.jpg') center/cover no-repeat;
+      height: 90vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      text-align: center;
+      padding: 0 20px;
+      position: relative;
+    }
+
+    .home::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.6);
+      z-index: 1;
+    }
+
+    .home * {
+      position: relative;
+      z-index: 2;
+    }
+
+    .home h2 {
+      font-size: 3rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+    }
+
+    .home p {
+      font-size: 1.2rem;
+      margin-top: 15px;
+      color: #ccc;
+      max-width: 600px;
+    }
+    
+    .home .btn {
+      margin-top: 25px;
+      background-color: #B20710;
+      color: #fff;
+      padding: 14px 32px;
+      border: none;
+      border-radius: 4px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: background-color 0.3s ease, transform 0.2s ease; 
+    }
+    
+    .home .btn:hover { 
+      background-color: #9e060d; 
+      transform: scale(1.05);
+    }
+
+    .about {
+      display: flex;
+      flex-wrap: wrap;
+      padding: 80px 60px;
+      align-items: center;
+      background-color: #111;
+      gap: 40px;
+    }
+
+    .about img {
+      flex: 1 1 400px;
+      max-width: 500px;
+      border-radius: 10px;
+    }
+
+    .about-text {
+      flex: 1 1 400px;
+    }
+
+    .about-text h3 {
+      font-size: 2rem;
+      color: #B20710;
+      margin-bottom: 20px;
+    }
+
+    .about-text p {
+      color: #ccc;
+      line-height: 1.6;
+    }
+
+    .classes {
+      padding: 80px 60px;
+      background-color: #1a1a1a;
+      text-align: center;
+    }
+
+    .classes h3 {
+      font-size: 2rem;
+      color: #B20710;
+      margin-bottom: 50px;
+    }
+
+    .class-cards {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 30px;
+    }
+
+    .class-item {
+      background-color: #222;
+      padding: 30px 20px;
+      border-radius: 10px;
+      width: 280px;
+      transition: transform 0.3s ease, background-color 0.3s ease;
+    }
+
+    .class-item:hover {
+      transform: translateY(-8px);
+      background-color: #2a2a2a;
+    }
+
+    .class-item h4 {
+      font-size: 1.3rem;
+      margin-bottom: 10px;
+      color: #fff;
+    }
+
+    .class-item p {
+      color: #aaa;
+      margin-bottom: 15px;
+    }
+
+    .class-item .btn-small {
+      background-color: #B20710;
+      color: #fff;
+      padding: 10px 0;
+      border: none;
+      width: 100%;
+      border-radius: 5px;
+      font-weight: 600;
+      cursor: pointer;
+    }
+
+    .plans {
+      padding: 80px 60px;
+      background-color: #000;
+      text-align: center;
+    }
+
+    .plans h3 {
+      font-size: 2rem;
+      color: #B20710;
+      margin-bottom: 50px;
+    }
+
+    .plan-cards {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 30px;
+    }
+
+    .plan {
+      background-color: #1a1a1a;
+      padding: 40px 30px;
+      border-radius: 10px;
+      width: 300px;
+      text-align: left;
+      transition: transform 0.3s ease, background-color 0.3s ease;
+    }
+
+    .plan:hover {
+      transform: translateY(-8px);
+      background-color: #2b2b2b;
+    }
+
+    .plan h4 {
+      font-size: 1.5rem;
+      margin-bottom: 10px;
+      color: #fff;
+    }
+
+    .plan p {
+      color: #aaa;
+      margin-bottom: 20px;
+    }
+
+    .plan .price {
+      color: #B20710;
+      font-weight: 700;
+      font-size: 1.2rem;
+      margin-bottom: 20px;
+    }
+
+    .plan button {
+      width: 100%;
+      background-color: #e50914;
+      border: none;
+      padding: 12px 0;
+      border-radius: 5px;
+      color: #fff;
+      font-weight: 600;
+      cursor: pointer;
+      transition: background-color 0.3s ease, transform 0.2s ease; 
+    }
+    
+    .plan button:hover { 
+      background-color: #c90812; 
+      transform: scale(1.02);
+    }
+
+    footer {
+      background-color: #000;
+      text-align: center;
+      padding: 40px 20px;
+      color: #888;
+      font-size: 0.9rem;
+      /* FIX: Added margin-top to separate footer from the last section */
+      margin-top: 40px; 
+    }
+
+    @media (max-width: 768px) {
+      .about {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      .home h2 {
+        font-size: 2.2rem;
+      }
+
+      header {
+        padding: 15px 20px;
+      }
+
+      .class-cards, .plan-cards {
+        flex-direction: column;
+        gap: 20px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <header> 
+    <div class="logo-container">
+      <img src="images/logo.png" alt="Melius Fitness Logo">
+      <h1>Melius Fitness</h1>
+    </div>
+
+
+    <nav>
+      <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#classes">Classes</a></li>
+        <li><a href="#plans">Membership</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section class="home" id="home">
+    <h2>Unleash Your Inner Strength</h2>
+    <p>Join Melius Fitness and transform your body, mind, and lifestyle with our best training programs and coaches.</p>
+    <a href="join.html" class="btn">Join Now</a>
+  </section>
+  <section class="about" id="about">
+   <img src="images/background" alt="Gym Image">
+
+    <div class="about-text">
+      <h3>About Us</h3>
+      <p>At Melius Fitness, we believe in the strength of discipline, perseverance, and determination. Our gym is equipped with state-of-the-art machines and dedicated trainers ready to help you achieve your fitness goals.</p>
+    </div>
+  </section>
+
+  <section class="classes" id="classes">
+    <h3>Our Class Offerings</h3>
+    <div class="class-cards">
+
+      <div class="class-item">
+        <h4>Strength Training</h4>
+        <p>Build muscle, increase endurance and get stronger with our expert-led sessions.</p>
+        <a href="strength.html"><button class="btn-small">Learn More</button></a>
+      </div>
+
+      <div class="class-item">
+        <h4>HIIT & Cardio</h4>
+        <p>High-intensity interval training that pushes you and burns calories fast.</p>
+        <a href="hiit.html"><button class="btn-small">Learn More</button></a>
+      </div>
+
+      <div class="class-item">
+        <h4>Yoga & Flexibility</h4>
+        <p>Improve mobility, reduce stress, and enhance recovery in our yoga classes.</p>
+        <a href="yoga.html"><button class="btn-small">Learn More</button></a>
+      </div>
+
+    </div>
+  </section>
+
+  <section class="plans" id="plans">
+    <h3>Membership Plans</h3>
+    <div class="plan-cards">
+
+      <div class="plan">
+        <h4>Basic</h4>
+        <p>Access to all gym equipment and locker rooms.</p>
+        <div class="price">₱900.00 / month</div>
+        <a href="join.html"><button>Get Started</button></a>
+      </div>
+
+      <div class="plan">
+        <h4>Advanced</h4>
+        <p>Includes group classes and personal trainer sessions.</p>
+        <div class="price">₱1,300.00 / month</div>
+        <a href="join.html"><button>Get Started</button></a>
+      </div>
+
+      <div class="plan">
+        <h4>Elite</h4>
+        <p>All Pro features + nutrition guidance and 24/7 access.</p>
+        <div class="price">₱2,600.00 / month</div>
+        <a href="join.html"><button>Get Started</button></a>
+      </div>
+
+    </div>
+  </section>
+
+  <footer id="contact">
+    <p>© 2025 Melius Fitness | Designed by Vincent Salino & David Cardizal</p>
+    <p>Email: MeliusFitness@gmail.com | Phone: +63 (965) 805-6962</p>
+  </footer>
+
+
+</body>
+</html> -->

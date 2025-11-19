@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yoga & Flexibility - Melius Fitness</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"> 
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        body {
+            background-color: #000;
+            color: #fff;
+            line-height: 1.6;
+        }
+
+        a {
+            color: inherit;
+            text-decoration: none;
+        }
+
+        header {
+            background-color: #000;
+            padding: 10px 40px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: sticky;
+            top: 0;
+            z-index: 10;
+        }
+
+        .logo-container {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .logo-container img {
+            width: 60px;
+            height: 60px;
+            object-fit: contain;
+        }
+
+        .logo-container h1 {
+            font-size: 1.8rem;
+            color: #B20710;
+            font-weight: 700;
+            letter-spacing: 1px;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 30px;
+        }
+
+        nav ul li a {
+            color: #fff;
+            font-weight: 500;
+            transition: color 0.3s ease, border-bottom 0.3s ease;
+            padding-bottom: 3px;
+        }
+
+        nav ul li a:hover {
+            color: #B20710;
+            border-bottom: 2px solid #B20710;
+        }
+     
+        .class-content-section {
+            padding: 50px 80px;
+            background-color: #111;
+            min-height: 70vh;
+            color: #fff;
+        }
+
+        .class-content-section h2 {
+            font-size: 2.5rem;
+            color: #B20710;
+            margin-bottom: 20px;
+            font-weight: 600;
+        }
+
+        .class-content-section p {
+            font-size: 1.1rem;
+            color: #ccc;
+            max-width: 800px;
+            margin-bottom: 30px;
+        }
+
+        .features-list {
+            list-style: none;
+            padding-left: 0;
+            margin-top: 20px;
+            margin-bottom: 40px;
+        }
+
+        .features-list li {
+            font-size: 1rem;
+            color: #fff;
+            margin-bottom: 10px;
+            position: relative;
+            padding-left: 30px;
+        }
+
+        .features-list li:before {
+            content: '✔';
+            color: #B20710;
+            font-weight: 700;
+            position: absolute;
+            left: 0;
+            font-size: 1.2rem;
+        }
+        
+       
+        .btn-group {
+            display: flex;
+            gap: 20px; 
+            margin-top: 50px;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 12px 25px;
+            background-color: #B20710;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            font-weight: 600;
+            cursor: pointer;
+            text-align: center;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+        }
+        
+        .btn:hover {
+            background-color: #9e060d;
+            transform: scale(1.05);
+        }
+
+        .nav-buttons {
+            display: flex;
+            justify-content: space-between;
+            max-width: 800px;
+            margin: 40px 0 0 0;
+        }
+
+        .nav-btn {
+            background-color: #222;
+            color: #B20710;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.2rem;
+            transition: background-color 0.3s, color 0.3s;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+        }
+
+        .nav-btn:hover {
+            background-color: #B20710;
+            color: white;
+            transform: scale(1.1);
+        }
+
+        /* --- Footer --- */
+        footer {
+            background-color: #000;
+            text-align: center;
+            padding: 40px 20px;
+            color: #888;
+            font-size: 0.9rem;
+            border-top: 1px solid #222;
+        }
+        
+        @media (max-width: 768px) {
+            header {
+                padding: 10px 20px;
+            }
+            .class-content-section {
+                padding: 40px 20px;
+            }
+            .class-content-section h2 {
+                font-size: 2rem;
+            }
+            .btn-group {
+                flex-direction: column;
+                gap: 15px;
+            }
+            .btn {
+                min-width: 100%;
+            }
+            .nav-buttons {
+                margin: 40px auto 0 auto;
+                justify-content: space-around;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <div class="logo-container">
+            <img src="images/logo.png" alt="Melius Fitness Logo">
+            <h1>Melius Fitness</h1>
+        </div>
+
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="index.html#about">About</a></li>
+                <li><a href="index.html#classes">Classes</a></li>
+                <li><a href="index.html#plans">Membership</a></li>
+                <li><a href="index.html#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="class-content-section">
+            <h2>Yoga & Flexibility</h2>
+            
+            <p>
+                Improve your mobility, flexibility, and mind-body connection in our Yoga and Flexibility classes. Perfect for recovery, reducing muscle soreness, and enhancing overall athletic performance. We offer restorative and dynamic flow sessions.
+            </p>
+
+            <ul class="features-list">
+                <li>Vinyasa and Restorative Flow Classes</li>
+                <li>Deep Stretching and Myofascial Release Techniques</li>
+                <li>Mindfulness and Breathing (Pranayama) Focus</li>
+                <li>Injury Recovery and Prevention Drills</li>
+            </ul>
+            
+            <p style="margin-top: 40px; font-size: 0.95rem; color: #aaa;">
+                Find your center and gain a competitive edge through improved flexibility.
+            </p>
+
+            <div class="btn-group">
+                <a href="updated.html#classes" class="btn">← Back to Classes</a> 
+                <a href="join.html" class="btn">Join This Class</a>
+            </div>
+            
+            <div class="nav-buttons">
+                <a href="hiit.html" class="nav-btn" title="Previous Class: HIIT & Cardio">
+                    <i class="fas fa-chevron-left"></i>
+                </a>
+                <a href="strength.html" class="nav-btn" title="Next Class: Strength Training">
+                    <i class="fas fa-chevron-right"></i>
+                </a>
+            </div>
+
+        </section>
+    </main>
+
+    <footer id="contact">
+        <p>© 2025 Melius Fitness | Designed by Vincent Salino & David Cardizal</p>
+        <p>Email: MeliusFitness@gmail.com | Phone: +63 (965) 805-6962</p>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,370 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Melius Gym Website</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    body {
+      background-color: #111;
+      color: #fff;
+      line-height: 1.6;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    header {
+      background-color: #000;
+      padding: 20px 60px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: sticky;
+      top: 0;
+      z-index: 10;
+    }
+
+    header h1 {
+      font-size: 1.8rem;
+      color: #B20710;
+      font-weight: 700;
+      letter-spacing: 1px;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 30px;
+    }
+
+    nav ul li a {
+      color: #fff;
+      font-weight: 500;
+      transition: color 0.3s ease, transform 0.2s ease;
+    }
+
+    nav ul li a:hover {
+      color: #B20710;
+      transform: translateY(-2px);
+    }
+
+    .home {
+      background: url('https://images.unsplash.com/photo-1517964603305-11c74e50b6d8?auto=format&fit=crop&w=1600&q=80') center/cover no-repeat;
+      height: 90vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      text-align: center;
+      padding: 0 20px;
+    }
+
+    .home h2 {
+      font-size: 3rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+    }
+
+    .home p {
+      font-size: 1.2rem;
+      margin-top: 15px;
+      color: #ccc;
+      max-width: 600px;
+    }
+
+    .home .btn {
+      margin-top: 25px;
+      background-color: #B20710;
+      color: #fff;
+      padding: 14px 32px;
+      border: none;
+      border-radius: 4px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: background 0.3s ease, transform 0.2s ease;
+    }
+
+    .home .btn:hover {
+      background-color: #ff3333;
+      transform: translateY(-3px);
+    }
+
+    .about {
+      display: flex;
+      flex-wrap: wrap;
+      padding: 80px 60px;
+      align-items: center;
+      background-color: #111;
+      gap: 40px;
+    }
+
+    .about img {
+      flex: 1 1 400px;
+      max-width: 500px;
+      border-radius: 10px;
+    }
+
+    .about-text {
+      flex: 1 1 400px;
+    }
+
+    .about-text h3 {
+      font-size: 2rem;
+      color: #B20710;
+      margin-bottom: 20px;
+    }
+
+    .about-text p {
+      color: #ccc;
+      line-height: 1.6;
+    }
+
+    .classes {
+      padding: 80px 60px;
+      background-color: #1a1a1a;
+      text-align: center;
+    }
+
+    .classes h3 {
+      font-size: 2rem;
+      color: #B20710;
+      margin-bottom: 50px;
+    }
+
+    .class-cards {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 30px;
+    }
+
+    .class-item {
+      background-color: #222;
+      padding: 30px 20px;
+      border-radius: 10px;
+      width: 280px;
+      transition: transform 0.3s ease, background-color 0.3s ease;
+    }
+
+    .class-item:hover {
+      background-color: #333;
+      transform: translateY(-8px);
+    }
+
+    .class-item h4 {
+      font-size: 1.3rem;
+      margin-bottom: 10px;
+      color: #fff;
+    }
+
+    .class-item p {
+      color: #aaa;
+      margin-bottom: 15px;
+    }
+
+    .class-item .btn-small {
+      background-color: #B20710;
+      color: #fff;
+      padding: 10px 0;
+      border: none;
+      width: 100%;
+      border-radius: 5px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+
+    .class-item .btn-small:hover {
+      background-color: #ff3333;
+    }
+
+    .plans {
+      padding: 80px 60px;
+      background-color: #000;
+      text-align: center;
+    }
+
+    .plans h3 {
+      font-size: 2rem;
+      color: #B20710;
+      margin-bottom: 50px;
+    }
+
+    .plan-cards {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 30px;
+    }
+
+    .plan {
+      background-color: #1a1a1a;
+      padding: 40px 30px;
+      border-radius: 10px;
+      width: 300px;
+      text-align: left;
+      transition: transform 0.3s ease;
+    }
+
+    .plan:hover {
+      transform: translateY(-10px);
+    }
+
+    .plan h4 {
+      font-size: 1.5rem;
+      margin-bottom: 10px;
+      color: #fff;
+    }
+
+    .plan p {
+      color: #aaa;
+      margin-bottom: 20px;
+    }
+
+    .plan .price {
+      color: #B20710;
+      font-weight: 700;
+      font-size: 1.2rem;
+      margin-bottom: 20px;
+    }
+
+    .plan button {
+      width: 100%;
+      background-color: #e50914;
+      border: none;
+      padding: 12px 0;
+      border-radius: 5px;
+      color: #fff;
+      font-weight: 600;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+
+    .plan button:hover {
+      background-color: #ff3333;
+    }
+
+    footer {
+      background-color: #000;
+      text-align: center;
+      padding: 40px 20px;
+      color: #888;
+      font-size: 0.9rem;
+    }
+
+    @media (max-width: 768px) {
+      .about {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      .home h2 {
+        font-size: 2.2rem;
+      }
+
+      header {
+        padding: 15px 30px;
+      }
+
+      .class-cards, .plan-cards {
+        flex-direction: column;
+        gap: 20px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <header>
+    <h1>Melius Gym</h1>
+    <nav>
+      <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#classes">Classes</a></li>    <!-- NEW TAB -->
+        <li><a href="#plans">Membership</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section class="home" id="home">
+    <h2>Unleash Your Inner Strength</h2>
+    <p>Join Melius Gym and transform your body, mind, and lifestyle with our best training programs and coaches.</p>
+    <button class="btn">Join Now</button>
+  </section>
+
+  <section class="about" id="about">
+    <img src="https://images.unsplash.com/photo-1558611848-73f7eb4001a1?auto=format&fit=crop&w=900&q=80" alt="Gym Image">
+    <div class="about-text">
+      <h3>About Us</h3>
+      <p>At Melius Gym, we believe in the strength of discipline, perseverance, and strength. Our Gym facility is equipped with state-of-the-art machines and trainers who are passionate to help you achieve your fitness goals. Whether you're a beginner or an athlete, we’ve got your back.</p>
+    </div>
+  </section>
+
+  <section class="classes" id="classes">
+    <h3>Our Class Offerings</h3>
+    <div class="class-cards">
+      <div class="class-item">
+        <h4>Strength Training</h4>
+        <p>Build muscle, increase endurance and get stronger with our expert-led sessions.</p>
+        <button class="btn-small">Learn More</button>
+      </div>
+      <div class="class-item">
+        <h4>HIIT & Cardio</h4>
+        <p>High-intensity interval training that pushes you and burns calories fast.</p>
+        <button class="btn-small">Learn More</button>
+      </div>
+      <div class="class-item">
+        <h4>Yoga & Flexibility</h4>
+        <p>Improve mobility, reduce stress and enhance recovery in our yoga classes.</p>
+        <button class="btn-small">Learn More</button>
+      </div>
+    </div>
+  </section>
+
+  <section class="plans" id="plans">
+    <h3>Membership Plans</h3>
+    <div class="plan-cards">
+      <div class="plan">
+        <h4>Basic</h4>
+        <p>Access to all gym equipment and locker rooms.</p>
+        <div class="price">₱900.00 / month</div>
+        <button>Get Started</button>
+      </div>
+
+      <div class="plan">
+        <h4>Advanced</h4>
+        <p>Includes group classes and personal trainer sessions.</p>
+        <div class="price">₱1,300.00 / month</div>
+        <button>Get Started</button>
+      </div>
+
+      <div class="plan">
+        <h4>Elite</h4>
+        <p>All Pro features + nutrition guidance and 24/7 access.</p>
+        <div class="price">₱2,600.00 / month</div>
+        <button>Get Started</button>
+      </div>
+    </div>
+  </section>
+
+  <footer id="contact">
+    <p>© 2025 Melius Gym | Designed by John Vincent Salino</p>
+    <p>Email: MeliusGym@gmail.com | Phone: +63 (965) 805-6962</p>
+  </footer>
+
+</body>
+</html> 
